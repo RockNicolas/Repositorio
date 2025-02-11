@@ -9,19 +9,24 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: 'Projeto 1',
-    description: 'Descrição do projeto 1.',
-    link: '#',
+    name: 'CriptoMoeda',
+    description: 'Este projeto é um sistema de monitoramento do mercado de criptomoedas desenvolvido com React e TypeScript. Ele utiliza uma API em tempo real para fornecer dados atualizados sobre as criptomoedas, permitindo que os usuários acompanhem as flutuações do mercado de forma eficiente.',
+    link: 'https://github.com/RockNicolas/Criptomoedas',
   },
   {
-    name: 'Projeto 2',
-    description: 'Descrição do projeto 2.',
-    link: '#',
+    name: 'PNG2PDF-Converter',
+    description: 'Uma aplicação em Python para ajudar nas tarefas diárias com a funcionalidade de transformar arquivos PNG convertendo para PDF',
+    link: 'https://github.com/RockNicolas/PNG2PDF-Converte',
   },
   {
-    name: 'Projeto 3',
-    description: 'Descrição do projeto 3.',
-    link: '#',
+    name: 'Sistema de Gerenciamento de Materiais',
+    description: 'Este é um sistema simples de gerenciamento de materiais desenvolvido com Laravel 5.2.45. O sistema permite ao usuário realizar operações de CRUD',
+    link: 'https://github.com/RockNicolas/Autenticacao-laravel',
+  },
+  {
+    name: 'PyExcelDrive',
+    description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
+    link: 'https://github.com/RockNicolas/PyExcelDrive',
   },
 ];
 
