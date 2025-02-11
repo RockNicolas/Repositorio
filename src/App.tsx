@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouterProvider } from 'react-router-dom'; 
 import { router } from './router/router'; 
-import './styles/App.css';
+import './App.css';
 
 const App: React.FC = () => {
   return (

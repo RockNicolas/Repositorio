@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/Projects.css';
+import React, { useState } from 'react';
+import './Projects.css';
 
 interface Project {
   name: string;
@@ -28,14 +28,30 @@ const projects: Project[] = [
     description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
     link: 'https://github.com/RockNicolas/PyExcelDrive',
   },
+  {
+    name: 'PyExcelDrive',
+    description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
+    link: 'https://github.com/RockNicolas/PyExcelDrive',
+  },
+  {
+    name: 'PyExcelDrive',
+    description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
+    link: 'https://github.com/RockNicolas/PyExcelDrive',
+  },
 ];
 
 const Projects: React.FC = () => {
+  const [visibleProjects, setVisibleProjects] = useState(2);
+
+  const loadMoreProjects = () => {
+    setVisibleProjects(prevVisible => prevVisible + 2);
+  };
+
   return (
     <section className="projects">
       <h2>Meus Projetos</h2>
       <div className="project-list">
-        {projects.map((project, index) => (
+        {projects.slice(0, visibleProjects).map((project, index) => (
           <div key={index} className="project-card">
             <h3>{project.name}</h3>
             <p>{project.description}</p>
@@ -43,6 +59,13 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
+
+      {}
+      {visibleProjects < projects.length && (
+        <button onClick={loadMoreProjects} className="load-more-btn">
+          Carregar mais
+        </button>
+      )}
     </section>
   );
 };

@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNode, faGithub, faVuejs, faBootstrap, faHtml5, faCss3Alt, faPython, faLaravel, faPhp } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons'; 
 import { faFileCode } from '@fortawesome/free-solid-svg-icons'; 
-import '../styles/Skills.css';
+import './Skills.css';
 
 const skills = [
   { name: 'React', icon: faReact, className: 'skill-react' },
