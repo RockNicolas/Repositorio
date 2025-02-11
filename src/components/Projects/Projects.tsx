@@ -41,6 +41,16 @@ const projects: Project[] = [
     description: 'Aplicação bem simples de ser desenvolvida e prática para o dia a dia, a ideia desse projeto eu pensei enquanto estava jogando, pensei "por que não fazer uma aplicação que rode um script que informe quantas teclas eu cliquei e quantos cliques de mouse", achei bem divertido fazer essa aplicação.',
     link: 'https://github.com/RockNicolas/teclas-mouse-py',
   },
+  {
+    name: 'Notificação',
+    description: 'Uma aplicação de notificação que lhe manda uma notificação no windows quando você coloca o horário específico que deseja, tem função de alarme com filhos, com a função de você conseguir deixar o script executando ou finalizando clicando nas teclas ctrl + C, essa ideia é assim que conseguir meu primeiro estágio quando lembrei do horário de ponto.',
+    link: 'https://github.com/RockNicolas/Notification',
+  },
+  {
+    name: 'SMTP-EMAIL',
+    description: 'Aplicação em laravel com a funcionabilidade de eviar gmail para confimação',
+    link: 'https://github.com/RockNicolas/SMTP-EMAIL',
+  },
 ];
 
 const getRepoLanguages = async (repoUrl: string) => {
