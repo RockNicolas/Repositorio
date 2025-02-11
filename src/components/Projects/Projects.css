@@ -16,7 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content:center;
+  justify-content: center;
 }
 
 .project-card {
@@ -29,8 +29,8 @@
 }
 
 .project-card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
@@ -52,5 +52,98 @@
 }
 
 .project-card a:hover {
-  color: #2980b9; 
+  color: #2980b9;
+}
+
+.load-more-btn {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.load-more-btn:hover {
+  background-color: #63b8ff;
+}
+
+.load-less-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.load-less-btn:hover {
+  background-color: #c0392b;
+}
+
+.project-card.animate-left {
+  animation: slide-left 0.3s forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+    border: 1px solid transparent;
+  }
+  100% {
+    transform: translateX(-100%);
+    border: 1px solid red;
+  }
+}
+
+.language-icons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.language-icons svg {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.language-icons svg:hover {
+  transform: scale(1.2);
+}
+
+.language-icons .react {
+  color: #61dafb;
+}
+
+.language-icons .python {
+  color: #306998;
+}
+
+.language-icons .php {
+  color: #8993be;
+}
+
+.language-icons .html {
+  color: #e34c26;
+}
+
+.language-icons .css {
+  color: #264de4;
+}
+
+.language-icons .javascript {
+  color: #f0db4f;
+}
+
+.language-icons .typescript {
+  color: #007acc;
+}
+
+.language-icons .laravel {
+  color: #ff2d20;
 }
