@@ -16,9 +16,9 @@ const projects: Project[] = [
     link: 'https://github.com/RockNicolas/Criptomoedas',
   },
   {
-    name: 'PNG2PDF-Converter',
-    description: 'Uma aplicação em Python para ajudar nas tarefas diárias com a funcionalidade de transformar arquivos PNG convertendo para PDF',
-    link: 'https://github.com/RockNicolas/PNG2PDF-Converte',
+    name: 'PyExcelDrive',
+    description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
+    link: 'https://github.com/RockNicolas/PyExcelDrive',
   },
   {
     name: 'Sistema de Gerenciamento de Materiais',
@@ -26,9 +26,9 @@ const projects: Project[] = [
     link: 'https://github.com/RockNicolas/Autenticacao-laravel',
   },
   {
-    name: 'PyExcelDrive',
-    description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
-    link: 'https://github.com/RockNicolas/PyExcelDrive',
+    name: 'PNG2PDF-Converter',
+    description: 'Uma aplicação em Python para ajudar nas tarefas diárias com a funcionalidade de transformar arquivos PNG convertendo para PDF',
+    link: 'https://github.com/RockNicolas/PNG2PDF-Converte',
   },
   {
     name: 'Loja-Suplementos',

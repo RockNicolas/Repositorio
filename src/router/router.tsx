@@ -3,7 +3,7 @@ import { Header } from '../components/Header/Header';
 import AboutMe from '../pages/AboutMe/AboutMe';
 import Portifolio from '../pages/Portifolio/Portifolio';
 import Skills from '../pages/Skills/Skills';
-import Projetos from '../components/Projetos/Projetos'
+import Projetos from '../pages/Projects/Projetos'
 import { NotFound } from '../pages/notfound/noutfound';  
 
 const router = createBrowserRouter([
