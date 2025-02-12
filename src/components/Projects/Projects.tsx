@@ -148,15 +148,12 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-
-      {/* Botão "Carregar mais" aparecerá se ainda houver mais projetos */}
       {visibleProjects < projects.length && !animating && (
         <button onClick={loadMoreProjects} className="load-more-btn">
           Carregar mais
         </button>
       )}
 
-      {/* Botão "Ver Menos" aparece se tivermos mais de 4 projetos */}
       {visibleProjects > 4 && !animating && (
         <button onClick={loadLessProjects} className="load-less-btn">
           Ver Menos

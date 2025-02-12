@@ -80,32 +80,48 @@ const skills = [
 const Skills: React.FC = () => {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const [showProjectSelection, setShowProjectSelection] = useState(false);  
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null); 
 
   const handleSkillClick = (skillName: string) => {
     setSelectedSkill(skillName);
-    setCurrentProjectIndex(0); 
+    setShowProjectSelection(true); 
   };
 
   const handleCloseCarrousel = () => {
     setSelectedSkill(null);
+    setSelectedProject(null);
+    setShowProjectSelection(false);  
+  };
+
+  const handleProjectSelect = (project: Project) => {
+    setSelectedProject(project);
+    setShowProjectSelection(false);  
   };
 
   const handleNextProject = () => {
-    if (selectedSkill) {
+    if (selectedSkill && selectedProject) {
       const skillProjects = projects[selectedSkill];
       const nextIndex = (currentProjectIndex + 1) % skillProjects.length;
       setCurrentProjectIndex(nextIndex);
+      setSelectedProject(skillProjects[nextIndex]); 
     }
   };
 
   const handlePrevProject = () => {
-    if (selectedSkill) {
+    if (selectedSkill && selectedProject) {
       const skillProjects = projects[selectedSkill];
       const prevIndex = (currentProjectIndex - 1 + skillProjects.length) % skillProjects.length;
       setCurrentProjectIndex(prevIndex);
+      setSelectedProject(skillProjects[prevIndex]);
     }
   };
 
+  const handleBackToProjectSelection = () => {
+    setShowProjectSelection(true); 
+    setSelectedProject(null);       
+  };
+  
   return (
     <section className="skills">
       <h2>Minhas Habilidades</h2>
@@ -116,34 +132,56 @@ const Skills: React.FC = () => {
             className={`skill-item ${skill.className}`}
             onClick={() => handleSkillClick(skill.name)}
           >
-            <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
-            <span>{skill.name}</span>
+            <FontAwesomeIcon 
+              icon={skill.icon || faReact} 
+              className="skill-icon" 
+            />
+            <span>{skill.name}</span> 
           </li>
         ))}
       </ul>
 
-      {selectedSkill && (
+      {showProjectSelection && selectedSkill && (
+        <div className="project-selection-overlay">
+          <div className="project-selection-container">
+            <button className="close-btn" onClick={handleCloseCarrousel}>X</button>
+            <h3 className="project-selection-header">Escolha um projeto</h3>
+            <ul className="project-list">
+              {projects[selectedSkill].map((project) => (
+                <li key={project.id} onClick={() => handleProjectSelect(project)} className="project-item">
+                 <FontAwesomeIcon 
+                    icon={skills.find(skill => skill.name === selectedSkill)?.icon || faReact} 
+                    className="project-icon" 
+                  />
+                  <span>{project.title}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      {selectedProject && (
         <div className="carrousel-overlay">
           <div className="carrousel-container">
             <button className="close-btn" onClick={handleCloseCarrousel}>X</button>
-            <h3>Projetos com {selectedSkill}</h3>
+            <h3>{selectedProject.title}</h3>
             <div className="carrousel">
               <button onClick={handlePrevProject}>&lt;</button>
               <div className="carrousel-item">
                 <img
-                  src={projects[selectedSkill][currentProjectIndex].image}
-                  alt={projects[selectedSkill][currentProjectIndex].title}
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
                 />
-                <p>{projects[selectedSkill][currentProjectIndex].title}</p>
               </div>
               <button onClick={handleNextProject}>&gt;</button>
             </div>
-          </div>
+            <button className="back-btn" onClick={handleBackToProjectSelection}>Voltar para a seleção de projetos</button>
+            </div>
         </div>
       )}
     </section>
   );
 };
-
 
 export default Skills;
