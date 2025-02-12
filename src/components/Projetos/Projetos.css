@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  color: white;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #60A5FA; 
+  font-size: 1.125rem; 
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.25rem; 
+  margin-top: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.25rem; 
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #9CA3AF; 
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.md\:flex-row {
+  flex-direction: row;
+}
+
+.md\:items-start {
+  align-items: flex-start;
+}
+
+.md\:w-1\/2 {
+  width: 50%;
+}
+
+.md\:order-2 {
+  order: 2;
+}
+
+.md\:order-1 {
+  order: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-blue-400 {
+  color: #60A5FA;
+}
+
+.text-gray-400 {
+  color: #9CA3AF;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  border-radius: 0.75rem; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  width: 80%; 
+  max-width: 300px;
+  height:; 
+  margin-bottom: 1rem; 
+}
+
+.md\:w-1\/2 img {
+  max-width: 100%;
+  margin-bottom: 1.5rem; /
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}

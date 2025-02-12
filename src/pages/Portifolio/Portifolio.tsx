@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Projects.css';
-import { FaReact, FaPython, FaPhp, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
-import { SiTypescript, SiLaravel } from 'react-icons/si';
+import './Portifolio.css';
+import ProjectCard from '../../components/Portifolio/ProjectCard';
 
 interface Project {
   name: string;
@@ -22,14 +21,14 @@ const projects: Project[] = [
     link: 'https://github.com/RockNicolas/PNG2PDF-Converte',
   },
   {
-    name: 'PyExcelDrive',
-    description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
-    link: 'https://github.com/RockNicolas/PyExcelDrive',
-  },
-  {
     name: 'Sistema de Gerenciamento de Materiais',
     description: 'Este é um sistema simples de gerenciamento de materiais desenvolvido com Laravel 5.2.45. O sistema permite ao usuário realizar operações de CRUD',
     link: 'https://github.com/RockNicolas/Autenticacao-laravel',
+  },
+  {
+    name: 'PyExcelDrive',
+    description: 'O script facilita o gerenciamento de imagens associadas a diferentes "tombamentos", baixando-as automaticamente de links do Google Drive e organizando-as em pastas estruturadas. ',
+    link: 'https://github.com/RockNicolas/PyExcelDrive',
   },
   {
     name: 'Loja-Suplementos',
@@ -51,6 +50,11 @@ const projects: Project[] = [
     description: 'Aplicação em laravel com a funcionabilidade de eviar gmail para confimação',
     link: 'https://github.com/RockNicolas/SMTP-EMAIL',
   },
+  {
+    name: 'List-tod',
+    description: 'Primeiro projeto em React usando Js é um todolist para a pessoa lembrar de suas tarefas diarias',
+    link: 'https://github.com/RockNicolas/tod-List',
+  },
 ];
 
 const getRepoLanguages = async (repoUrl: string) => {
@@ -68,7 +72,7 @@ const getRepoLanguages = async (repoUrl: string) => {
 };
 
 const Projects: React.FC = () => {
-  const [visibleProjects, setVisibleProjects] = useState(4);
+  const [visibleProjects, setVisibleProjects] = useState(3);
   const [projectLanguages, setProjectLanguages] = useState<Record<string, string[]>>({});
   const [animating, setAnimating] = useState(false);
 
@@ -93,40 +97,15 @@ const Projects: React.FC = () => {
   }, []);
 
   const loadMoreProjects = () => {
-    setVisibleProjects((prevVisible) => prevVisible + 4);
+    setVisibleProjects((prevVisible) => prevVisible + 6);
   };
 
   const loadLessProjects = () => {
     setAnimating(true);
     setTimeout(() => {
-      setVisibleProjects(4);
+      setVisibleProjects(3);
       setAnimating(false);
     }, 300);
-  };
-
-  const renderLanguageIcons = (languages: string[]) => {
-    return languages.map((language, index) => {
-      switch (language.toLowerCase()) {
-        case 'react':
-          return <FaReact key={index} className="react" title="React" />;
-        case 'python':
-          return <FaPython key={index} className="python" title="Python" />;
-        case 'php':
-          return <FaPhp key={index} className="php" title="PHP" />;
-        case 'html':
-          return <FaHtml5 key={index} className="html" title="HTML" />;
-        case 'css':
-          return <FaCss3Alt key={index} className="css" title="CSS" />;
-        case 'javascript':
-          return <FaJsSquare key={index} className="javascript" title="JavaScript" />;
-        case 'typescript':
-          return <SiTypescript key={index} className="typescript" title="TypeScript" />;
-        case 'laravel':
-          return <SiLaravel key={index} className="laravel" title="Laravel" />;
-        default:
-          return null;
-      }
-    });
   };
 
   return (
@@ -134,18 +113,14 @@ const Projects: React.FC = () => {
       <h2>Meus Projetos</h2>
       <div className="project-list">
         {projects.slice(0, visibleProjects).map((project, index) => (
-          <div key={index} className={`project-card ${animating ? 'animate-left' : ''}`}>
-            <h3>
-              {project.name}
-              <span className="language-icons">
-                {renderLanguageIcons(projectLanguages[project.name] || [])}
-              </span>
-            </h3>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </a>
-          </div>
+          <ProjectCard
+            key={index}
+            name={project.name}
+            description={project.description}
+            link={project.link}
+            languages={projectLanguages[project.name] || []}
+            animating={animating}
+          />
         ))}
       </div>
       {visibleProjects < projects.length && !animating && (
@@ -153,7 +128,6 @@ const Projects: React.FC = () => {
           Carregar mais
         </button>
       )}
-
       {visibleProjects > 4 && !animating && (
         <button onClick={loadLessProjects} className="load-less-btn">
           Ver Menos
