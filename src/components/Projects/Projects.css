@@ -15,9 +15,10 @@
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 70px; 
   justify-content: center;
 }
+
 
 .project-card {
   background-color: #f4f4f4;

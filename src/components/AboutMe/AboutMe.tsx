@@ -3,22 +3,30 @@ import './AboutMe.css';
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="about-me">
-      <h2>Sobre Mim</h2>
+    <div className="about-me-container">
       <div className="about-me-content">
-        <div className="text">
-          <p>
-            Sou Nicolas Rock, um desenvolvedor apaixonado por tecnologia, atualmente no 5º semestre da faculdade. No momento, estou estagiando na Liv Saúde como estagiário de desenvolvimento, pelo ICC (Iniciação Científica e Criativa). Esse estágio tem sido uma ótima oportunidade para aplicar o que aprendi até agora e desenvolver novas habilidades em um ambiente profissional.
-            Tenho uma experiência sólida no desenvolvimento front-end, trabalhando com React, TypeScript, JavaScript, HTML, CSS e outras ferramentas modernas para criar interfaces interativas e funcionais. Além disso, já participei de projetos em grupos que usaram PHP, Laravel e Oracle, o que me ajudou a expandir meus conhecimentos em tecnologias back-end também.
-            Também trabalho com Python, principalmente em automação, processamento de dados e desenvolvimento de APIs. Como freelancer, tenho a oportunidade de explorar uma variedade de projetos, o que me permite crescer constantemente e melhorar meu portfólio.
-            Estou sempre em busca de novos desafios e de aprender coisas novas. Gosto de me manter atualizado sobre as últimas tendências do mercado e de aplicar essas novas descobertas nos meus projetos, criando soluções inovadoras e de alta qualidade.
+        <div className="text-section">
+          <h2 className="heading-subtitle">About Me</h2>
+          <h1 className="heading-main">Professional Website Designer</h1>
+          <p className="description">
+            Hello! I’m Magret, a passionate website designer dedicated to crafting beautiful and functional websites that help businesses thrive online. With a keen eye for detail and a love for design, I transform ideas into engaging digital experiences.
           </p>
+          <a className="learn-more-btn" href="#">
+            Learn more
+            <i className="fas fa-arrow-right ml-2"></i>
+          </a>
         </div>
-        <div className="photos">
-          <img src="./public/86e04d91-b33c-4b33-8fec-a96a3e5be3ea.jpg" alt="Foto minha 1" />
+        <div className="image-section">
+          <img
+            className="profile-image"
+            alt="Professional website designer in a black suit"
+            src="https://storage.googleapis.com/a1aa/image/ONPfnglba7FHsmgDRVFYqaEVVu8NOgdVX76IQnD4Xkc.jpg"
+            height="400"
+            width="300"
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
