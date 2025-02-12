@@ -1,8 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SkillItem from '../../components/Skills/SkillItem';
 import { faReact, faNode, faGithub, faVuejs, faBootstrap, faHtml5, faCss3Alt, faPython, faLaravel, faPhp } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons'; 
-import { faFileCode } from '@fortawesome/free-solid-svg-icons'; 
+import { faFileCode } from '@fortawesome/free-solid-svg-icons';
 import './Skills.css';
 
 const skills = [
@@ -26,10 +26,12 @@ const Skills: React.FC = () => {
       <h2>Minhas Habilidades</h2>
       <ul className="skills-list">
         {skills.map((skill, index) => (
-          <li key={index} className={`skill-item ${skill.className}`}>
-            <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
-            <span>{skill.name}</span>
-          </li>
+          <SkillItem
+            key={index}
+            name={skill.name}
+            icon={skill.icon}
+            className={skill.className}
+          />
         ))}
       </ul>
     </section>

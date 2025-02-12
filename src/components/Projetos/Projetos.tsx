@@ -10,7 +10,7 @@ const Portfolio = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
           <div className="md:w-1/2">
             <h3 className="text-2xl mb-2">01</h3>
-            <h4 className="text-xl mb-2">Coaching Websites</h4>
+            <h4 className="text-xl mb-2">Barbearia El Macho</h4>
             <p className="text-gray-400 mb-4">
               As a website designer, I create coaching websites that reflect professionalism and trust.
               Each site features intuitive navigation, engaging visuals, and mobile responsiveness to enhance user experience.
@@ -21,7 +21,7 @@ const Portfolio = () => {
               alt="A collage of various coaching websites designed by the portfolio owner"
               className="rounded-lg shadow-lg"
               height="300"
-              src="https://storage.googleapis.com/a1aa/image/LBSoN6ppG_KgEbapqq41aZkk9r0qgWUUsz2RoLvrtig.jpg"
+              src="./public/Imgs/ElMacho.png"
               width="300"
             />
           </div>

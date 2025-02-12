@@ -6,7 +6,7 @@ const ImageSection: React.FC = () => {
       <img
         className="profile-image"
         alt="Professional website designer in a black suit"
-        src="./public/86e04d91-b33c-4b33-8fec-a96a3e5be3ea.jpg"
+        src="./public/rock/86e04d91-b33c-4b33-8fec-a96a3e5be3ea.jpg"
       />
     </div>
   );
