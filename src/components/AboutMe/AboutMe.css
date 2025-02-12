@@ -1,19 +1,68 @@
 .about-me {
-    background-color: #f4f4f4;
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  .about-me h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .about-me p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-  }
-  
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 40px; 
+  font-family: 'Arial', sans-serif;
+}
+
+.about-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  animation: auraAnimation 4s infinite;
+  width: 100%;
+}
+
+
+.about-me-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  flex: 1;
+  padding-right: 20px;
+  background-color: #f9f9f9; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.text p {
+  font-size: 17px; 
+  color: #333; 
+  font-family: 'Arial', sans-serif; 
+  line-height: 1.6; 
+  font-weight: 500; 
+  transition: color 0.3s ease; 
+}
+
+.text p:hover {
+  color: #0066cc; /
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  align-items: center;
+}
+
+.photos img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photos img:hover {
+  transform: scale(1.1); 
+}

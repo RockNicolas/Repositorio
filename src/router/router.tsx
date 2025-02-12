@@ -11,9 +11,9 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Header />
-        <AboutMe />
-        <Projects />
         <Skills />
+        <Projects />
+        <AboutMe />
       </div>
     ),
   },
