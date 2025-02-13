@@ -7,8 +7,8 @@ const Portfolio: React.FC = () => {
     <div className="container px-4 py-8">
       <h1 className="text-center text-blue-400 text-lg">Meu Portifólio</h1>
       <h2 className="text-center text-3xl mt-2">Projetos em que trabalhei</h2>
-      
       <div className="mt-12">
+        
         <ProjectCard
           projectNumber="01"
           title="Barbearia El Macho"
@@ -32,6 +32,7 @@ const Portfolio: React.FC = () => {
           imgSrc="./public/Imgs/sanke.png"
           imgAlt="A collage of various interior design websites designed by the portfolio owner"
         />
+
       </div>
     </div>
   );
