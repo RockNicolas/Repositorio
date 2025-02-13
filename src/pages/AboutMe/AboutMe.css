@@ -31,14 +31,8 @@ body {
   max-width: 600px;
 }
 
-.heading-subtitle {
-  font-size: 1.25rem;
-  color: #81e6d9;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
 .heading-main {
+  color: #81e6d9;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;

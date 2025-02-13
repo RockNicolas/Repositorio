@@ -1,7 +1,6 @@
 import React from 'react';
 import SkillItem from '../../components/Skills/SkillItem';
-import { faReact, faNode, faGithub, faVuejs, faBootstrap, faHtml5, faCss3Alt, faPython, faLaravel, faPhp } from '@fortawesome/free-brands-svg-icons';
-import { faJsSquare } from '@fortawesome/free-brands-svg-icons'; 
+import { faReact, faNode, faGithub, faVuejs, faBootstrap, faHtml5, faCss3Alt, faPython, faLaravel, faPhp, faJsSquare } from '@fortawesome/free-brands-svg-icons'; 
 import { faFileCode } from '@fortawesome/free-solid-svg-icons';
 import './Skills.css';
 
