@@ -1,101 +1,133 @@
 .skills {
-    background-color: #fff;
+    background-color: #000;
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 20px;
+    text-align: center;
 }
   
 .skills h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #333;
-    text-align: center;
+    color: #1e90ff;
 }
   
 .skills-list {
     display: flex;
-    flex-wrap: wrap;
+    gap: 15px;
     justify-content: center;
-    gap: 30px; 
-    padding: 0;
-    list-style: none;
+    flex-wrap: wrap;
 }
   
 .skill-item {
+    background-color: #2d2d2d;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #1e90ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 1 180px; 
+    margin-bottom: 15px; 
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 1.2rem;
-    color: #555;
-    text-align: center;
-    transition: transform 0.3s ease;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
 }
   
 .skill-item:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
   
-.skill-item .skill-icon {
-    font-size: 3rem; 
-    margin-bottom: 10px;
+.skill-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0; 
+    color: #ffffff;
+}
+  
+.skill-item svg {
+    font-size: 30px;
+    color: #1e90ff;
     transition: transform 0.3s ease;
 }
   
-.skill-item:hover .skill-icon {
-    transform: translateY(-5px);
+.skill-item svg:hover {
+    transform: scale(1.2);
+}
+
+.skill-item.react svg {
+    color: #61dafb;
 }
   
-.skill-item span {
-    font-size: 1rem;
-    color: #555;
-}
-  
-.skill-react .skill-icon {
-    color: #61DBFB; 
-}
-  
-.skill-ts .skill-icon {
-    color: #3178C6; 
-}
-  
-.skill-js .skill-icon {
-    color: #F7DF1E; 
-}
-  
-.skill-node .skill-icon {
-    color: #68A063; 
-}
-  
-.skill-vue .skill-icon {
-    color: #4FC08D; 
-}
-  
-.skill-css .skill-icon {
-    color: #2965F1; 
-}
-  
-.skill-html .skill-icon {
-    color: #E34F26;
-}
-  
-.skill-git .skill-icon {
-    color: #F1502F; 
-}
-  
-.skill-bootstrap .skill-icon {
-    color: #563D7C;/
-}
-  
-.skill-python .skill-icon {
+.skill-item.python svg {
     color: #306998;
 }
   
-.skill-laravel .skill-icon {
-    color: #F05340; 
+.skill-item.php svg {
+    color: #8993be;
 }
   
-.skill-php .skill-icon {
-    color: #8993BE; 
+.skill-item.html svg {
+    color: #e34c26;
+}
+  
+.skill-item.css svg {
+    color: #264de4;
+}
+  
+.skill-item.javascript svg {
+    color: #f0db4f;
+}
+  
+.skill-item.typescript svg {
+    color: #007acc;
+}
+  
+.skill-item.laravel svg {
+    color: #ff2d20;
+}
+  
+.skill-item.git svg {
+    color: #333;
+}
+  
+.load-more-btn {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+  
+.load-more-btn:hover {
+    background-color: #63b8ff;
+}
+  
+@media (max-width: 1200px) {
+    .skill-item {
+      flex: 0 1 200px; 
+    }
+}
+  
+@media (max-width: 768px) {
+    .skills h2 {
+      font-size: 1.5rem; 
+}
+  
+.skill-item {
+      flex: 0 1 150px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .skills h2 {
+      font-size: 1.2rem;
+    }   
+  
+    .skill-item {
+      flex: 0 1 120px; 
+    }
 }
   
