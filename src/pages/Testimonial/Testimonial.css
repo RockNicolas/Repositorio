@@ -1,0 +1,115 @@
+/* Testi.css */
+
+/* Container principal */
+.testi-container {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /* Cabeçalho */
+  .testi-header {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .testi-subtitle {
+    color: #00bcd4;
+    font-size: 1.25rem;
+  }
+  
+  .testi-title {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    font-family: "Georgia", serif;
+  }
+  
+  .testi-description {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Seção de depoimentos */
+  .testi-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  /* Formulário */
+  .testi-form {
+    background-color: #333;
+    padding: 3rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .testi-form-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+    text-align: center;
+  }
+  
+  .testi-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .testi-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .testi-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testi-input {
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .testi-stars {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .testi-star-empty {
+    color: #ccc; /* Cor cinza para estrelas vazias */
+    cursor: pointer;
+    font-size: 2rem; /* Tamanho maior para as estrelas */
+  }
+  
+  .testi-star-filled {
+    color: #ffcc00; /* Cor amarela para estrelas selecionadas */
+    cursor: pointer;
+    font-size: 2rem; /* Tamanho maior para as estrelas */
+  }
+  
+  .testi-submit-button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .testi-submit-button:hover {
+    background-color: #0097a7;
+  }
+  
+  
