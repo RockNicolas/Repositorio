@@ -4,23 +4,28 @@ import AboutMe from '../pages/AboutMe/AboutMe';
 import Portifolio from '../pages/Portifolio/Portifolio';
 import Skills from '../pages/Skills/Skills';
 import Projetos from '../pages/Projects/Projetos'
-import Testi from '../pages/Testimonial/Testimonial'
-import { NotFound } from '../pages/notfound/noutfound';  
+import Testimonaial from '../pages/Testimonial/Testimonial'
+import { NotFound } from '../pages/notfound/noutfound'; 
+{/*import Contato from '../pages/Contato/Contato'  */ }
 import Footer from '../components/Footer/Footer'
+import ErrorBoundary from '../components/Error/ErrorBoundary'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div>
-        <Header />
-        <Skills />
-        <Portifolio />
-        <AboutMe />
-        <Projetos />
-        <Testi />
-        <Footer />
-      </div>
+      <ErrorBoundary>
+        <div>
+          <Header />
+          <Skills />
+          <Portifolio />
+          <AboutMe />
+          <Projetos />
+          <Testimonaial />
+        {/* <Contato /> */} 
+          <Footer />
+        </div>
+      </ErrorBoundary>
     ),
   },
   {

@@ -10,7 +10,7 @@ interface Review {
   estrelas: number;
 }
 
-const Testi: React.FC = () => {
+const Testimonaial: React.FC = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [formData, setFormData] = useState({
     nome: '',
@@ -71,4 +71,4 @@ const Testi: React.FC = () => {
   );
 };
 
-export default Testi;
+export default Testimonaial;
