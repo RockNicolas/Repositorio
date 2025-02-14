@@ -1,9 +1,8 @@
 .header {
   transition: background-color 0.3s, padding 0.3s;
-  padding: 29px
+  padding: 29px;
 }
 
-.header.scrolled {
-  background-color: #1c1f24;
+.header.scrolled { 
   padding: 10px;
 }

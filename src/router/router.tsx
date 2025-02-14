@@ -6,6 +6,7 @@ import Skills from '../pages/Skills/Skills';
 import Projetos from '../pages/Projects/Projetos'
 import Testi from '../pages/Testimonial/Testimonial'
 import { NotFound } from '../pages/notfound/noutfound';  
+import Footer from '../components/Footer/Footer'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         <AboutMe />
         <Projetos />
         <Testi />
+        <Footer />
       </div>
     ),
   },
