@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Testimonial.css'; 
+import './Testimonial.css';
 
 interface Review {
   nome: string;
@@ -15,8 +15,7 @@ const Testi: React.FC = () => {
     estrelas: 0,
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [showForm, setShowForm] = useState(true);  
-
+  const [showForm, setShowForm] = useState(true);
   const handleStarClick = (starCount: number) => {
     setFormData((prevState) => ({ ...prevState, estrelas: starCount }));
   };
@@ -30,34 +29,36 @@ const Testi: React.FC = () => {
       ]);
       setFormData({ nome: '', comentario: '', estrelas: 0 });
       setIsSubmitted(true);
-      setShowForm(false);  
+      setShowForm(false);
     } else {
       alert('Por favor, preencha todos os campos e atribua uma nota!');
     }
   };
 
+  const handleNewReviewClick = () => {
+    setIsSubmitted(false);
+    setShowForm(true);
+    setFormData({ nome: '', comentario: '', estrelas: 0 });
+  };
+
   return (
     <div className="testi-container">
       <section className="testi-header">
-        <h2 className="testi-subtitle">Depoimentos</h2>
-        <h1 className="testi-title">Histórias de clientes: Vozes do sucesso</h1>
-        <p className="testi-description">Avaliações de clientes satisfeitos</p>
+        <h2 className="testi-title">Avaliações de clientes</h2>
+        <p className="testi-description">clientes satisfeitos</p>
       </section>
 
       {isSubmitted && reviews.length > 0 && (
         <section className="testi-reviews">
           {reviews.map((review, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg max-w-sm">
-              <div className="flex items-center mb-4">
+            <div key={index} className="testi-review-card">
+              <div className="review-stars">
                 {[...Array(review.estrelas)].map((_, idx) => (
-                  <i key={idx} className="fas fa-star text-yellow-500" />
+                  <i key={idx} className="fas fa-star" />
                 ))}
               </div>
-              <p className="mb-4">{review.comentario}</p>
-              <div className="flex items-center">
-                <img alt="Avatar" className="w-12 h-12 rounded-full mr-4" src="https://via.placeholder.com/150" />
-                <span>{review.nome}</span>
-              </div>
+              <p>{review.comentario}</p>
+              <div className="review-name">{review.nome}</div>
             </div>
           ))}
         </section>
@@ -108,6 +109,14 @@ const Testi: React.FC = () => {
             </button>
           </form>
         </section>
+      )}
+
+      {isSubmitted && (
+        <div className="new-comment-button">
+          <button onClick={handleNewReviewClick} className="testi-submit-button">
+            Fazer outro comentário
+          </button>
+        </div>
       )}
     </div>
   );

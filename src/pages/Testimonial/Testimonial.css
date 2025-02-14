@@ -1,103 +1,153 @@
-/* Testi.css */
-
-/* Container principal */
 .testi-container {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
     padding: 20px;
-  }
-  
-  /* Cabeçalho */
-  .testi-header {
+}
+
+.testi-header {
     text-align: center;
     padding: 3rem 0;
-  }
-  
-  .testi-subtitle {
-    color: #00bcd4;
-    font-size: 1.25rem;
-  }
-  
-  .testi-title {
+}
+
+.testi-title {
     font-size: 3rem;
     margin-top: 0.5rem;
     font-family: "Georgia", serif;
-  }
-  
-  .testi-description {
-    font-size: 1.25rem;
+    color: #00bcd4;
+}
+
+.testi-description {
+    font-size: 1.7rem;
     margin-top: 0.5rem;
-  }
-  
-  /* Seção de depoimentos */
-  .testi-reviews {
+}
+
+.testi-reviews {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
     margin-top: 3rem;
-  }
-  
-  /* Formulário */
-  .testi-form {
+}
+
+.testi-form {
     background-color: #333;
     padding: 3rem;
     border-radius: 8px;
-    max-width: 600px;
+    max-width: 540px;
     margin: 0 auto;
-  }
-  
-  .testi-form-title {
+}
+
+.testi-form-title {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #00bcd4;
     text-align: center;
-  }
-  
-  .testi-form-content {
+}
+
+.testi-form-content {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-  
-  .testi-form-group {
+}
+
+.testi-form-group {
     display: flex;
     flex-direction: column;
-  }
-  
-  .testi-label {
+}
+
+.testi-label {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .testi-input {
+}
+
+.testi-input {
     padding: 1rem;
     border-radius: 8px;
     border: none;
     background-color: #f0f0f0;
     font-size: 1rem;
     color: black;
-  }
-  
-  .testi-stars {
+}
+/
+.testi-stars {
     display: flex;
     gap: 0.5rem;
-  }
-  
-  .testi-star-empty {
-    color: #ccc; /* Cor cinza para estrelas vazias */
+}
+
+.testi-star-empty {
+    color: #ccc;
     cursor: pointer;
-    font-size: 2rem; /* Tamanho maior para as estrelas */
-  }
-  
-  .testi-star-filled {
-    color: #ffcc00; /* Cor amarela para estrelas selecionadas */
+    font-size: 2rem;
+}
+
+.testi-star-filled {
+    color: #ffcc00;
     cursor: pointer;
-    font-size: 2rem; /* Tamanho maior para as estrelas */
+    font-size: 2rem;
+}
+
+.testi-submit-button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testi-submit-button:hover {
+    background-color: #0097a7;
+}
+
+.testi-review-card {
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.testi-review-card:hover {
+    transform: scale(1.05);
+}
+
+.testi-review-card .review-stars {
+    display: flex;
+    gap: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.testi-review-card .review-stars .fas.fa-star {
+    color: #ffcc00;
+}
+
+.testi-review-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.testi-review-card .review-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+.testi-reviews {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.new-comment-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
   
-  .testi-submit-button {
+  .new-comment-button button {
     background-color: #00bcd4;
     color: white;
     padding: 1rem;
@@ -108,8 +158,13 @@
     transition: background-color 0.3s ease;
   }
   
-  .testi-submit-button:hover {
-    background-color: #0097a7;
+  .new-comment-button button:hover {
+    background-color:rgb(1, 120, 136);
   }
   
-  
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
