@@ -1,25 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import './Header.css';
+import React from 'react';
 
-export const Header: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+const Header: React.FC = () => {
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-      <h1>Meu Portfólio</h1>
+    <header className="flex justify-between items-center p-6">
+      <nav className="space-x-6">
+        <a className="text-cyan-500" href="#">
+          HOME
+        </a>
+        <a className="hover:text-cyan-500" href="#">
+          ABOUT
+        </a>
+        <a className="hover:text-cyan-500" href="#">
+          SERVICES
+        </a>
+        <a className="hover:text-cyan-500" href="#">
+          PORTFOLIO
+        </a>
+        <a className="hover:text-cyan-500" href="#">
+          CONTACT ME
+        </a>
+      </nav>
     </header>
   );
 };
+
+export default Header;
