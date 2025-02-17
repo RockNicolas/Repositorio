@@ -1,5 +1,4 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Header from '../components/Header/Header'
 import  MainContent  from '../components/Header/MainContent'
 import AboutMe from '../pages/AboutMe/AboutMe';
 import Portifolio from '../pages/Portifolio/Portifolio';
@@ -17,7 +16,6 @@ const router = createBrowserRouter([
     element: (
       <ErrorBoundary>
         <div>
-          <Header />
           <MainContent />
           <Skills />
           <Portifolio />
