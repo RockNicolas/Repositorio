@@ -165,6 +165,7 @@
 .laravel { animation-delay: 8s; }
 .vue { animation-delay: 9s; }
 .mysql { animation-delay: 10s; }
+.bootstrap { animation-delay: 11s; }
 
 .icon.animate {
     opacity: 1;

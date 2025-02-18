@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaPython, FaPhp, FaNodeJs, FaDatabase } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaPython, FaPhp, FaNodeJs, FaDatabase, FaBootstrap } from 'react-icons/fa';
 import { SiTypescript, SiLaravel, SiVuedotjs } from 'react-icons/si';
 
 const IconsContainer: React.FC = () => {
@@ -16,6 +16,7 @@ const IconsContainer: React.FC = () => {
       <SiLaravel className="icon laravel" />
       <SiVuedotjs className="icon vue" />
       <FaDatabase className="icon mysql" />
+      <FaBootstrap className="icon bootstrap" />
     </div>
   );
 };
