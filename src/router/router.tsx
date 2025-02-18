@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import  MainContent  from '../components/Header/MainContent'
+import  MainContent  from '../pages/Header/MainContent'
 import AboutMe from '../pages/AboutMe/AboutMe';
 import Portifolio from '../pages/Portifolio/Portifolio';
 import Skills from '../pages/Skills/Skills';

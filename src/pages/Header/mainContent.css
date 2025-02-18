@@ -1,0 +1,83 @@
+.main-content-container {
+position: relative;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(#232630, #050507);
+overflow: hidden; 
+}
+
+@keyframes slide-up {
+0% {
+    transform: translateY(30px) scale(0.9); 
+    opacity: 0;
+}
+50% {
+    transform: translateY(-10px) scale(1.05); 
+    opacity: 0.6;
+}
+100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+}
+
+.main-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0 2rem;
+z-index: 10;
+position: relative;
+animation: slide-up 1.5s ease-out forwards;
+}
+
+.main-title {
+font-size: 3rem;
+font-weight: bold;
+margin-bottom: 1rem;
+color: #06b6d4; 
+text-transform: uppercase;
+letter-spacing: 2px;
+animation: slide-up 1.5s ease-out forwards;
+animation-delay: 0.3s;
+transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.main-title:hover {
+transform: scale(1.1); 
+color: #00b3b3; 
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    animation: slide-up 1.5s ease-out forwards;
+    animation-delay: 0.6s;
+    line-height: 1.4;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sub-title:hover {
+    transform: scale(1.05); 
+    color: #06b6d4; 
+}
+
+.description {
+    font-size: 1.125rem;
+    color: #444;
+    margin-bottom: 2rem;
+    animation: slide-up 1.5s ease-out forwards;
+    animation-delay: 0.9s;
+    max-width: 600px; 
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.main-title, .sub-title, .description {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); 
+}
