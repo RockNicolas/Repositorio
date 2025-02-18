@@ -1,6 +1,6 @@
 import './Projetos.css'; 
 
-const Portfolio = () => {
+const Projetos = () => {
   return (
     <div className="container px-4 py-8">
       <h1 className="text-center text-blue-400 text-lg">Projetos em que trabalhei</h1>
@@ -27,7 +27,7 @@ const Portfolio = () => {
             />
           </div>
         </div>
-
+        
         <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
           <div className="md:w-1/2 order-2 md:order-1">
             <img
@@ -35,7 +35,7 @@ const Portfolio = () => {
               className="rounded-lg shadow-lg"
               height="300"
               src="./public/Imgs/sanke.png"
-              width="300"
+              width="30 0"
             />
           </div>
           <div className="md:w-1/2 order-1 md:order-2">
@@ -48,19 +48,19 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="md:w-1/2">
-          <h3 className="text-xl mb-2">03</h3>
+            <h3 className="text-xl mb-2">03</h3>
             <h4 className="text-xl mb-2">Lojas de Suplementos</h4>
             <p className="text-gray-400 mb-4">
-              As a website designer, I create interior design websites that showcase style and functionality.
-              These sites include portfolio galleries, design tips, and easy navigation for a seamless user experience.
+              Este projeto foi uma loja online de suplementos desenvolvida com PHP, que inclui recursos como cadastro de usuários e de produtos, sistema de pagamento e carrinho de compras. 
+              A plataforma permite que os usuários escolham os produtos desejados e os adicionem ao carrinho de compras, com funcionalidades como atualização de quantidade, remoção de itens e cálculo automático do valor total. 
+              A integração com o banco de dados MySQL foi feita para armazenar as informações dos produtos, pedidos e usuários, oferecendo uma experiência de compra online funcional e dinâmica.
             </p>
           </div>
           <div className="md:w-1/2">
             <img
-              alt="A collage of various interior design websites designed by the portfolio owner"
+              alt="A screenshot of a supplement store website"
               className="rounded-lg shadow-lg"
               height="300"
               src="https://storage.googleapis.com/a1aa/image/LBSoN6ppG_KgEbapqq41aZkk9r0qgWUUsz2RoLvrtig.jpg"
@@ -71,6 +71,5 @@ const Portfolio = () => {
       </div>
     </div>
   );
-};
-
-export default Portfolio;
+}
+export default Projetos;

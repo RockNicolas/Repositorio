@@ -3,7 +3,7 @@ import  MainContent  from '../pages/Header/MainContent'
 import AboutMe from '../pages/AboutMe/AboutMe';
 import Portifolio from '../pages/Portifolio/Portifolio';
 import Skills from '../pages/Skills/Skills';
-import Projetos from '../pages/Projects/Projetos'
+import Projetos from '../pages/Projetos/Projetos'
 import Testimonaial from '../pages/Testimonial/Testimonial'
 import { NotFound } from '../pages/notfound/noutfound'; 
 {/*import Contato from '../pages/Contato/Contato'  */ }
