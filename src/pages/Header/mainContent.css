@@ -103,8 +103,8 @@
 }
 
 .description {
-    font-size: 1.125rem;
-    color: #444;
+    font-size: 1.4rem;
+    color: #fff;
     margin-bottom: 2rem;
     animation: slide-up 1.5s ease-out forwards;
     animation-delay: 0.9s;
@@ -191,4 +191,14 @@
     width: 150px;
     border: 2px solid #06b6d4;
     margin: 0 auto 1rem auto;
+}
+
+.white-text {
+  color: #06b6d4;
+  font-size: 1.9rem;
+}
+
+.white-text:hover {
+  transform: scale(1.05);
+  color: #00b3b3;
 }

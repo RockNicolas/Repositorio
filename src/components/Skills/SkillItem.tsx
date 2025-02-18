@@ -8,9 +8,15 @@ interface SkillItemProps {
 }
 
 const SkillItem: React.FC<SkillItemProps> = ({ name, icon, className }) => {
+  const isFontAwesomeIcon = (icon: any) => icon && icon.iconName; 
+
   return (
     <li className={`skill-item ${className}`}>
-      <FontAwesomeIcon icon={icon} className="skill-icon" />
+      {isFontAwesomeIcon(icon) ? (
+        <FontAwesomeIcon icon={icon} className="skill-icon" />
+      ) : (
+        React.createElement(icon, { className: 'skill-icon' })
+      )}
       <span>{name}</span>
     </li>
   );

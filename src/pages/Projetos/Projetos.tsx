@@ -1,6 +1,20 @@
-import './Projetos.css'; 
+import React, { useState } from 'react';
+import './Projetos.css';
 
-const Projetos = () => {
+const Projetos: React.FC = () => {
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+
+  const handleImageClick = (link: string) => {
+    setIsClicked(true);
+    
+    setTimeout(() => {
+      if (link) {
+        // Para abrir a aplicação ou link após a animação
+        window.open(link, '_blank');
+      }
+    }, 1000); // 1 segundo de atraso após a animação de rotação
+  };
+
   return (
     <div className="container px-4 py-8">
       <h1 className="text-center text-blue-400 text-lg">Projetos em que trabalhei</h1>
@@ -19,35 +33,38 @@ const Projetos = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              alt="A collage of various coaching websites designed by the portfolio owner"
-              className="rounded-lg shadow-lg"
+              alt="Barbearia El Macho"
+              className={`rounded-lg shadow-lg ${isClicked ? 'clicked' : ''}`}
               height="300"
               src="./public/Imgs/ElMacho.png"
               width="300"
+              onClick={() => handleImageClick('https://link-do-projeto-el-macho.com')} // Link do projeto
             />
           </div>
         </div>
-        
+
         <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
           <div className="md:w-1/2 order-2 md:order-1">
             <img
-              alt="A fitness website with a man and woman exercising"
-              className="rounded-lg shadow-lg"
+              alt="Game Snake"
+              className={`rounded-lg shadow-lg ${isClicked ? 'clicked' : ''}`}
               height="300"
               src="./public/Imgs/sanke.png"
-              width="30 0"
+              width="300"
+              onClick={() => handleImageClick('https://link-para-o-jogo-snake.com')} // Link para o jogo Snake
             />
           </div>
           <div className="md:w-1/2 order-1 md:order-2">
             <h3 className="text-2xl mb-2">02</h3>
             <h4 className="text-xl mb-2">Game Snake</h4>
             <p className="text-gray-400 mb-4">
-            Este projeto foi meu primeiro projeto em PYTHON é uma implementação do jogo clássico "Snake", desenvolvido com a biblioteca Pygame. O objetivo é controlar uma cobrinha que cresce
-            à medida que ela consome alimentos na tela, Através desse projeto, explorei a utilização de Pygame, Esse projeto foi uma ótima oportunidade para 
-            aprender e praticar o Python
+              Este projeto foi meu primeiro projeto em PYTHON é uma implementação do jogo clássico "SNAKE", desenvolvido com a biblioteca Pygame. O objetivo é controlar uma cobrinha que cresce
+              à medida que ela consome alimentos na tela, Através desse projeto, explorei a utilização de Pygame, Esse projeto foi uma ótima oportunidade para 
+              aprender e praticar o Python
             </p>
           </div>
         </div>
+
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="md:w-1/2">
             <h3 className="text-xl mb-2">03</h3>
@@ -60,16 +77,18 @@ const Projetos = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              alt="A screenshot of a supplement store website"
-              className="rounded-lg shadow-lg"
+              alt="Lojas de Suplementos"
+              className={`rounded-lg shadow-lg ${isClicked ? 'clicked' : ''}`}
               height="300"
               src="https://storage.googleapis.com/a1aa/image/LBSoN6ppG_KgEbapqq41aZkk9r0qgWUUsz2RoLvrtig.jpg"
               width="300"
+              onClick={() => handleImageClick('https://link-da-loja.com')} // Link da loja
             />
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
 export default Projetos;

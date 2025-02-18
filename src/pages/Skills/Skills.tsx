@@ -1,12 +1,12 @@
 import React from 'react';
 import SkillItem from '../../components/Skills/SkillItem';
 import { faReact, faNode, faGithub, faVuejs, faBootstrap, faHtml5, faCss3Alt, faPython, faLaravel, faPhp, faJsSquare } from '@fortawesome/free-brands-svg-icons'; 
-import { faFileCode } from '@fortawesome/free-solid-svg-icons';
+import { SiTypescript } from 'react-icons/si';
 import './Skills.css';
 
 const skills = [
   { name: 'React', icon: faReact, className: 'skill-react' },
-  { name: 'TypeScript', icon: faFileCode, className: 'skill-ts' },
+  { name: 'TypeScript', icon: SiTypescript, className: 'skill-ts' },
   { name: 'JavaScript', icon: faJsSquare, className: 'skill-js' },
   { name: 'VueJs', icon: faVuejs, className: 'skill-vue' },
   { name: 'CSS3', icon: faCss3Alt, className: 'skill-css' },

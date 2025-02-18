@@ -139,16 +139,16 @@
 }
 
 .project-card.animate-left {
-  animation: slide-left 0.3s forwards;
+  animation: slideInLeft 1s ease-out;
 }
 
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-    border: 1px solid transparent;
-  }
-  100% {
+@keyframes slideInLeft {
+  from {
     transform: translateX(-100%);
-    border: 1px solid red;
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

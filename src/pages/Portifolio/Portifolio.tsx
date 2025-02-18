@@ -47,7 +47,7 @@ const projects: Project[] = [
   },
   {
     name: 'SMTP-EMAIL',
-    description: 'Aplicação em laravel com a funcionabilidade de eviar gmail para confimação',
+    description: 'Aplicação em laravel com a funcionabilidade de enviar gmail para confimação',
     link: 'https://github.com/RockNicolas/SMTP-EMAIL',
   },
   {
