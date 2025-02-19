@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillItem from '../../components/Skills/SkillItem';
-import { faReact, faNode, faGithub, faVuejs, faBootstrap, faHtml5, faCss3Alt, faPython, faLaravel, faPhp, faJsSquare } from '@fortawesome/free-brands-svg-icons'; 
+import { faReact, faNode, faGithub, faVuejs, faBootstrap, faHtml5, faCss3Alt, faPython, faLaravel, faPhp, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { SiTypescript } from 'react-icons/si';
 import './Skills.css';
 

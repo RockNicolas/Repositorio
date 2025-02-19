@@ -147,7 +147,7 @@
     margin-top: 2rem;
   }
   
-  .new-comment-button button {
+.new-comment-button button {
     background-color: #00bcd4;
     color: white;
     padding: 1rem;
@@ -156,15 +156,14 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
   
-  .new-comment-button button:hover {
+.new-comment-button button:hover {
     background-color:rgb(1, 120, 136);
-  }
+}
   
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
-

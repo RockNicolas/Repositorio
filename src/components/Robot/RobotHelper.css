@@ -1,0 +1,35 @@
+.robot-message {
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.balloon {
+  background-color: #60A5FA;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.robot-icon-message {
+  display: flex;
+  align-items: center;
+  background-color: #60A5FA;
+  color: white;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.robot-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.message {
+  font-size: 1rem;
+  color: #333;
+}
