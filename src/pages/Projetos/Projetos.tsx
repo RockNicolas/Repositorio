@@ -1,18 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import './Projetos.css';
 
-
 const Projetos: React.FC = () => {
   const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [gameStatus, setGameStatus] = useState<string>('');
 
-  const handleImageClick = (link: string) => {
+  const handleImageClick = async (link: string, isPythonGame: boolean) => {
     setIsClicked(true);
 
-    setTimeout(() => {
-      if (link) {
-        window.open(link, '_blank');
+    if (isPythonGame) {
+      try { 
+        const response = await fetch('http://127.0.0.1:5000/run-snake-game');
+        const data = await response.json();
+        
+        if (data.error) {
+          setGameStatus(`Erro: ${data.error}`);
+        } else {
+          setGameStatus(data.message);
+          console.log(data.output); 
+        }
+      } catch (error) {
+        console.error("Erro ao executar o script Python:", error);
+        setGameStatus("Erro ao tentar rodar o jogo.");
       }
-    }, 1000);
+    } else {
+      setTimeout(() => {
+        if (link) {
+          window.open(link, '_blank');
+        }
+      }, 1000);
+    }
   };
 
   useEffect(() => {
@@ -53,7 +70,7 @@ const Projetos: React.FC = () => {
               height="300"
               src="./Imgs/ElMacho.png"
               width="300"
-              onClick={() => handleImageClick('https://rocknicolas.github.io/Barbearia-El-Macho/')} 
+              onClick={() => handleImageClick('https://rocknicolas.github.io/Barbearia-El-Macho/', false)} 
             />
           </div>
         </div>
@@ -66,7 +83,7 @@ const Projetos: React.FC = () => {
               height="300"
               src="./Imgs/snake.png"
               width="300"
-              onClick={() => handleImageClick('https://link-para-o-jogo-snake.com')} 
+              onClick={() => handleImageClick('', true)} 
             />
           </div>
           <div className="md:w-1/2 order-1 md:order-2">
@@ -77,6 +94,7 @@ const Projetos: React.FC = () => {
               à medida que ela consome alimentos na tela. Através desse projeto, explorei a utilização de Pygame e foi uma ótima oportunidade para
               aprender e praticar o Python.
             </p>
+            {gameStatus && <p>{gameStatus}</p>}
           </div>
         </div>
 
@@ -97,7 +115,7 @@ const Projetos: React.FC = () => {
               height="300"
               src="./Imgs/Cripto.png"
               width="300"
-              onClick={() => handleImageClick('https://link-da-loja.com')}
+              onClick={() => handleImageClick('https://link-da-loja.com', false)} 
             />
           </div>
         </div>
