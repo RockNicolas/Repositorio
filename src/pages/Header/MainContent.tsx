@@ -9,7 +9,7 @@ const MainContent: React.FC = () => {
   return (
     <div className="main-content-container">
       <main className="main-content">
-        <RobotHelper message="fqfqfwqfwq" className={'robot'} />
+        <RobotHelper message="Este portfólio foi feito para o usuario interagir, Clique nas Imagens!" className={'robot'} />
         <Title />
         <Description />
         <IconsContainer />

@@ -101,7 +101,7 @@ const Projetos: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="md:w-1/2">
             <h3 className="text-xl mb-2">03</h3>
-            <h4 className="text-xl mb-2">Lojas de Suplementos</h4>
+            <h4 className="text-xl mb-2">CriptoMoedas</h4>
             <p className="text-gray-400 mb-4">
               Este projeto é um sistema de monitoramento do mercado de criptomoedas desenvolvido com React e TypeScript.
               Ele utiliza uma API em tempo real para fornecer dados atualizados sobre as criptomoedas, permitindo que
@@ -115,8 +115,30 @@ const Projetos: React.FC = () => {
               height="300"
               src="./Imgs/Cripto.png"
               width="300"
-              onClick={() => handleImageClick('https://link-da-loja.com', false)} 
+              onClick={() => handleImageClick('https://creative-granita-497137.netlify.app/', false)} 
             />
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
+          <div className="md:w-1/2 order-2 md:order-1">
+            <img
+              alt=""
+              className={`rounded-lg shadow-lg ${isClicked ? 'clicked' : ''}`}
+              height="300"
+              src="./Imgs/flores.png"
+              width="300"
+              onClick={() => handleImageClick('https://rocknicolas.github.io/Flores/', false)} 
+            />
+          </div>
+          <div className="md:w-1/2 order-1 md:order-2">
+            <h3 className="text-2xl mb-2">04</h3>
+            <h4 className="text-xl mb-2">Flores</h4>
+            <p className="text-gray-400 mb-4">
+              Um dos meus primeiros projetos com o Html5, CSS3 e JavaScritp, algo basico que fiz para 
+              melhorar o meu desing com o Front-end, achei bem legal e pratico de se fazer, fiz tudo em 
+              uma estrutura so de HTML, importei o styles e script dentro do Html.
+            </p>
           </div>
         </div>
       </div>
