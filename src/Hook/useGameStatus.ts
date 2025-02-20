@@ -5,20 +5,14 @@ const useGameStatus = () => {
 
   const fetchGameStatus = async () => {
     try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-      if (!apiUrl) {
-        setGameStatus('URL da API não configurada.');
-        return;
-      }
-
-      const response = await fetch(apiUrl);
+      const response = await fetch('http://127.0.0.1:5000/run-snake-game');
       const data = await response.json();
 
       if (data.error) {
         setGameStatus(`Erro: ${data.error}`);
       } else {
         setGameStatus(data.message);
-        console.log(data.output);
+        console.log(data.output);               
       }
     } catch (error) {
       console.error("Erro ao executar o script Python:", error);

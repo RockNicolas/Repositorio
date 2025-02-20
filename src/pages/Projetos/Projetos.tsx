@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useGameStatus from '../../Hook/useGameStatus'
+import useGameStatus from '../../hook/useGameStatus'
 import './Projetos.css';
 
 const Projetos: React.FC = () => {
