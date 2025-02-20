@@ -51,7 +51,7 @@ const Projetos: React.FC = () => {
   
   return (
     <div className="container px-4 py-8">
-      <h1 className="text-center text-blue-400 text-lg">Projetos em que trabalhei</h1>
+      <h1 className="text-center text-lg">Projetos em que trabalhei</h1>
       <div className="mt-12 projetos-section">
         <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
           <div className="md:w-1/2">
