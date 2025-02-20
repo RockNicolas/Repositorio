@@ -1,28 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import useGameStatus from '../../Hook/useGameStatus'
 import './Projetos.css';
 
 const Projetos: React.FC = () => {
   const [isClicked, setIsClicked] = useState<boolean>(false);
-  const [gameStatus, setGameStatus] = useState<string>('');
-
-  const handleImageClick = async (link: string, isPythonGame: boolean) => {
+  const { gameStatus, fetchGameStatus } = useGameStatus(); 
+  
+  const handleImageClick = (link: string, isPythonGame: boolean) => {
     setIsClicked(true);
 
     if (isPythonGame) {
-      try { 
-        const response = await fetch('http://127.0.0.1:5000/run-snake-game');
-        const data = await response.json();
-        
-        if (data.error) {
-          setGameStatus(`Erro: ${data.error}`);
-        } else {
-          setGameStatus(data.message);
-          console.log(data.output); 
-        }
-      } catch (error) {
-        console.error("Erro ao executar o script Python:", error);
-        setGameStatus("Erro ao tentar rodar o jogo.");
-      }
+      fetchGameStatus(); 
     } else {
       setTimeout(() => {
         if (link) {
@@ -48,7 +36,7 @@ const Projetos: React.FC = () => {
       if (section) observer.unobserve(section);
     };
   }, []);
-  
+
   return (
     <div className="container px-4 py-8">
       <h1 className="text-center text-lg">Projetos em que trabalhei</h1>
