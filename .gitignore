@@ -7,12 +7,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Diretórios do Node
 node_modules
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Arquivos e diretórios de editor
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Arquivo .env, com as variáveis sensíveis, deve ser ignorado
+.env
