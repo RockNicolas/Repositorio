@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "concurrently \"npm run vite\" \"npm run flask\"",
     "vite": "vite",
+<<<<<<< HEAD
     "flask": "set \"FLASK_APP=Back-End.app\" && flask run --host=0.0.0.0 --port=5000"
+=======
+   "flask": "set \"FLASK_APP=Back-End.app\" && flask run --host=0.0.0.0 --port=5000"
+>>>>>>> 888970d23c41da910b61705e971249a70dded6fc
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
